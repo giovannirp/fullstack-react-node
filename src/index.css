@@ -13,6 +13,8 @@
   background: #fff;
   display: flex;
   height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .opcoes {
@@ -34,6 +36,7 @@
 .icones {
   display: flex;
   margin-left: 30px;
+  align-items: center;
 }
 
 .icone {
