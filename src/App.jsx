@@ -1,5 +1,6 @@
 import Header from "./Components/Header";
 import styled from "styled-components";
+import Pesquisa from "./Components/Pesquisa";
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -16,6 +17,7 @@ function App() {
     <>
       <AppContainer>
         <Header />
+        <Pesquisa />
       </AppContainer>
     </>
   );
