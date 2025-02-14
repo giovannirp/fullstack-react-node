@@ -29,7 +29,7 @@ const NovosLivrosContainer = styled.div`
 export default function UltimosLancamentos() {
   return (
     <UltimosLancamentoContainer>
-      <Titulo>ultimos lancamentos</Titulo>
+      <Titulo>Ultimos lancamentos</Titulo>
       <NovosLivrosContainer>
         {livros.map(livro => (
           <img src={livro.src} key={livro.id} />
