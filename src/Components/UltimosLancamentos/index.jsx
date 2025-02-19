@@ -25,7 +25,7 @@ const NovosLivrosContainer = styled.div`
 export default function UltimosLancamentos() {
   return (
     <UltimosLancamentoContainer>
-      <Titulo cor="#EB9B00"
+     <Titulo cor="#EB9B00"
         tamanhoFonte="36px">
         Últimos lançamentos
       </Titulo>
