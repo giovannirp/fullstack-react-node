@@ -49,9 +49,13 @@ export default function Pesquisa() {
   const [livros, setLivros] = useState([]);
 
   useEffect(() => {
-    const livrosAPI = getLivros()
-    setLivros(livrosAPI)
+    fetchLivros()
   }, [])
+
+  async function fetchLivros() {
+   const livrosAPI = await getLivros()
+    setLivros(livrosAPI);
+  }
 
   return (
     <PesquisaContainer>
