@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Input from "../Input";
+import { postFavorito } from "../../servicos/favoritos";
 import { useEffect, useState } from "react";
 import { getLivros } from "../../servicos/livros";
 // import { livros } from './dadosPesquisa'
@@ -57,6 +58,11 @@ export default function Pesquisa() {
     setLivros(livrosAPI);
   }
 
+  async function insertFavorito(id) {
+    await postFavorito(id)
+    alert(`Livro de id:${id} inserido!`)
+  }
+
   return (
     <PesquisaContainer>
       <Titulo>Já sabe por onde começar?</Titulo>
@@ -71,7 +77,7 @@ export default function Pesquisa() {
         }}
       />
       {livrosPesquisado.map((livro) => (
-        <Resultado key={livro.nome}>
+        <Resultado onClick={() => insertFavorito(livro.id)} key={livro.nome}>
           <p>{livro.nome}</p>
           <img src={livro.src} />
         </Resultado>
